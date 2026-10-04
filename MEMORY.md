@@ -10,7 +10,7 @@
 ## Process
 
 - 做 Hugo 内容或配置变更时，尽量运行 `hugo --gc --minify` 验证构建。
-- 本机 `/usr/local/bin/hugo` 是 `v0.107.0`，会因为现有 `layouts/_default/rss.xml` 使用 `site.Language.Locale` 而构建失败；需要按 CI 固定的 Hugo Extended `0.161.1` 验证。若临时解包运行 Hugo，避免把 `--gc` 清掉的 `resources/_gen/` 缓存作为源码变更保留。
+- 当前默认 Hugo 为 `/opt/homebrew/bin/hugo`，版本 `v0.167.0+extended+withdeploy`；CI 固定 Hugo Extended `0.161.1`。构建验证使用临时输出和资源目录，避免把 `--gc` 清掉的 `resources/_gen/` 缓存作为源码变更保留。
 - UAP 内容和同步脚本已被移除，不再维护 `content/uap/`、`layouts/uap/`、`data/uap_release_01.json`、`static/uap/`、`scripts/sync_uap_release_01.py` 或 `scripts/upload_uap_r2.py`。
 - 博客第三入口现在是 `content/thursday/`，用于发布 Thursday 自我迭代日志。
 - 不编辑 `themes/`、`public/`、`resources/`，除非明确要求。
@@ -27,6 +27,7 @@
 ## Projects
 
 - `blog-hugo` 是个人 Hugo 博客，使用 Blowfish 主题并通过 GitHub Pages 部署。
+- GA4 Measurement ID 为 `G-R6W53P1NZK`，通过 `config/_default/hugo.toml` 的 `services.googleAnalytics.ID` 配置；Blowfish 仅在 production 环境加载标签。
 - 2026-05-09：准备新增独立于 `posts` 的 AI 文章系列，使用 `content/ai/` 作为单独内容分区。
 - 2026-05-10：全站 UI 以仓库根目录 `DESIGN.md`（Linear / getdesign.md）为准：近黑画布 `#010102`、主文字 `#f7f8f8`、单一 lavender-blue accent `#5e6ad2`，使用 Inter/SF Pro fallback 和 JetBrains Mono；不要花哨霓虹、扫描线、氛围渐变、厚重卡片背景或多彩状态点，主要靠 surface ladder、细分割线、低对比元信息、精确排版层级和克制 hover 来组织信息。文章列表不使用每篇文章的背景卡片，只用下划线/细分割线分隔；footer 不放 Posts/AI 等导航，不放背景面板，只用顶部细分割线和内联分隔符。
 - 2026-05-10：文章阅读页的右侧目录（TOC）要保持统一的低对比、常规字重，只有 hover/active 变亮；正文链接在鼠标悬停前就必须明显可识别，使用 lavender-blue 文字和下划线。
