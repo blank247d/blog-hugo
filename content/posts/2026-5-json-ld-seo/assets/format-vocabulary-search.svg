@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="440" viewBox="0 0 1080 440" role="img" aria-labelledby="title desc"><title id="title">表达格式、共同词汇、搜索规则各有职责</title><desc id="desc">JSON-LD 用 Schema.org 词汇表达数据，搜索引擎读取后依据自身规则处理。</desc><defs><style>.bg{fill:#010102}.box{fill:#0f1011;stroke:#34343a}.title{fill:#f7f8f8;font:600 30px Inter,"PingFang SC",sans-serif}.h{fill:#f7f8f8;font:500 24px Inter,"PingFang SC",sans-serif}.note{fill:#8a8f98;font:400 19px Inter,"PingFang SC",sans-serif}.line{fill:none;stroke:#5e6ad2;stroke-width:2}</style><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#5e6ad2"/></marker></defs><rect class="bg" width="1080" height="440"/><text class="title" x="48" y="65">表达格式、共同词汇、搜索规则各有职责</text>
+<rect class="box" x="48" y="145" width="270" height="160" rx="8"/>
+<text class="h" x="72" y="192">Schema.org</text><text class="note" x="72" y="231">定义类型和属性</text><text class="note" x="72" y="267">BlogPosting / author</text>
+<path class="line" d="M328 225H386" marker-end="url(#arrow)"/>
+<rect class="box" x="402" y="145" width="270" height="160" rx="8"/>
+<text class="h" x="426" y="192">JSON-LD</text><text class="note" x="426" y="231">用共同词汇表达数据</text><text class="note" x="426" y="267">@context / @type</text>
+<path class="line" d="M682 225H740" marker-end="url(#arrow)"/>
+<rect class="box" x="756" y="145" width="276" height="160" rx="8"/>
+<text class="h" x="780" y="192">搜索引擎</text><text class="note" x="780" y="231">理解实体与关系</text><text class="note" x="780" y="267">按自身规则选择展示</text>
+<text class="note" x="48" y="378">Schema.org 有定义 ≠ 搜索功能支持 ≠ 实际展示</text></svg>
